@@ -16,6 +16,8 @@ export default [
       return
     }
 
+    console.info(events)
+
     const events = body.events
     axios.post(process.env.LOTTERY_API,
       { "day": 16, "month": 4, "year": 2560 },
