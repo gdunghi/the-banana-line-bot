@@ -17,7 +17,7 @@ export default [
     }
 
     const events = body.events
-    axios.post('http://127.0.0.1:5000/lottery/get',
+    axios.post(process.env.LOTTERY_API,
       { "day": 16, "month": 4, "year": 2560 },
       {
         headers: {
