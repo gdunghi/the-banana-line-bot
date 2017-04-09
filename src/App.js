@@ -20,6 +20,19 @@ export default [
 
     const events = body.events
     if ('00000000000000000000000000000000' === events[0].replyToken) {
+      let reply = {
+        replyToken: events[0].replyToken,
+        messages: [
+          {
+            "type": "text",
+            "text": "หวยงวดหน้าคือ"
+          },
+          {
+            "type": "text",
+            "text": "Hi"
+          }
+        ]
+      }
       axios.post(
         'https://api.line.me/v2/bot/message/reply',
         reply,
